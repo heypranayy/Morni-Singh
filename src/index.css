@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  /* Sophisticated Luxury White & Alabaster Canvas */
+  --color-canvas-pure: #ffffff;
+  --color-canvas-warm: #faf8f5;
+  --color-canvas-stone: #f5f1e8;
+  --color-canvas-cream: #efebe2;
+
+  /* Deep Forest Pine & High-Contrast Typography */
+  --color-forest-950: #0f1d15;
+  --color-forest-900: #14281e;
+  --color-forest-800: #1c382a;
+  --color-forest-700: #294e3b;
+  --color-forest-600: #38644c;
+
+  /* Editorial Warm Neutrals & Hairline Borders */
+  --color-parchment-50: #ffffff;
+  --color-parchment-100: #faf8f5;
+  --color-parchment-200: #f4efdf;
+  --color-parchment-300: #e7dfcd;
+  --color-parchment-400: #d6cab2;
+
+  /* High-Contrast Luxury Gold / Brass */
+  --color-gold-100: #fbf5e8;
+  --color-gold-200: #f5e4bf;
+  --color-gold-300: #ebd08d;
+  --color-gold-400: #dfb962;
+  --color-gold-500: #c99a38;
+  --color-gold-600: #a87b27;
+  --color-gold-700: #875f1b;
+
+  /* Warm Earth & Terracotta */
+  --color-terracotta-500: #c2410c;
+  --color-terracotta-600: #9a3412;
+
+  /* High-Contrast Charcoal */
+  --color-charcoal-950: #0a0d0b;
+  --color-charcoal-900: #121714;
+  --color-charcoal-800: #1f2621;
+  --color-charcoal-700: #333d36;
+  --color-charcoal-600: #4a574e;
+}
+
+/* Base resets & typography */
+:root {
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
+  --font-ui: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-ui);
+  background-color: #ffffff;
+  color: #14281e;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Editorial Classes */
+.font-editorial {
+  font-family: var(--font-editorial);
+}
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+/* Subtle luxury card & border styles for white background */
+.luxury-border {
+  border: 1px solid rgba(163, 117, 37, 0.2);
+}
+
+.luxury-border-strong {
+  border: 1px solid rgba(163, 117, 37, 0.4);
+}
+
+.card-luxury-light {
+  background-color: #ffffff;
+  border: 1px solid #e7dfcd;
+  box-shadow: 0 4px 20px -2px rgba(20, 40, 30, 0.05);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-luxury-light:hover {
+  border-color: rgba(163, 117, 37, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -4px rgba(20, 40, 30, 0.1);
+}
+
+/* Magnetic Button helper */
+.btn-magnetic {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.btn-magnetic:hover {
+  transform: translateY(-2px);
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf8f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6cab2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a37525;
+}
+
+/* Continuous Infinite Marquee Ribbon */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

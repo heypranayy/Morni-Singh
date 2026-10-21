@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#0F1D15"/>
+  <circle cx="32" cy="24" r="10" stroke="#C89B53" stroke-width="1.5" stroke-dasharray="2 2" fill="none" opacity="0.6"/>
+  <!-- Mountain contours -->
+  <path d="M12 48L28 26L40 40L48 30L56 48H12Z" fill="#182C22" stroke="#C89B53" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M28 26L34 34L40 40" stroke="#DFB770" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Stylized pine tree in foreground -->
+  <path d="M32 38L36 44H34V48H30V44H28L32 38Z" fill="#C89B53"/>
+  <!-- Star / Sun compass -->
+  <circle cx="32" cy="18" r="2.5" fill="#DFB770"/>
+</svg>
