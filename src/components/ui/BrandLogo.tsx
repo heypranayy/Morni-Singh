@@ -14,14 +14,14 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   theme = "light",
 }) => {
   const sizeMap = {
-    sm: "h-10",
+    sm: "h-8 xs:h-9 sm:h-10",
     md: "h-14",
     lg: "h-20",
     xl: "h-28",
   };
 
   return (
-    <div className={`inline-flex items-center gap-3 ${className}`}>
+    <div className={`inline-flex items-center gap-2 xs:gap-2.5 sm:gap-3 ${className}`}>
       <svg
         viewBox="0 0 320 200"
         fill="none"
@@ -129,14 +129,14 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       {showText && (
         <div className="flex flex-col text-left whitespace-nowrap text-nowrap shrink-0">
           <span
-            className={`font-serif text-lg sm:text-xl font-medium tracking-wide leading-tight whitespace-nowrap text-nowrap ${
+            className={`font-serif text-base xs:text-lg sm:text-xl font-medium tracking-wide leading-tight whitespace-nowrap text-nowrap ${
               theme === "dark" ? "text-white" : "text-forest-950"
             }`}
           >
             MORNI SINGH’S
           </span>
           <span
-            className={`text-[10px] sm:text-[11px] tracking-[0.25em] uppercase font-ui font-medium whitespace-nowrap text-nowrap ${
+            className={`text-[9px] xs:text-[10px] sm:text-[11px] tracking-[0.18em] xs:tracking-[0.22em] sm:tracking-[0.25em] uppercase font-ui font-medium whitespace-nowrap text-nowrap ${
               theme === "dark" ? "text-gold-400" : "text-gold-600"
             }`}
           >

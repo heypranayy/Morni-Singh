@@ -71,8 +71,8 @@ export const Navbar: React.FC<NavbarProps> = () => {
         </div>
 
         {/* Main Floating Glass Navbar (Transparent at Top, Glass Floating on Scroll) */}
-        <nav className="w-full py-2.5 sm:py-3 transition-all duration-300">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 flex-nowrap">
+        <nav className="w-full py-2 sm:py-3 transition-all duration-300">
+          <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4 flex-nowrap">
             {/* Brand Logo & Emblem - Single Line & Shrink-0 */}
             <Link to="/" className="flex items-center group shrink-0">
               <BrandLogo size="sm" showText={true} theme="dark" />
@@ -122,27 +122,35 @@ export const Navbar: React.FC<NavbarProps> = () => {
               </Link>
             </div>
 
-            {/* Mobile Actions: Quick 1-tap WhatsApp + Glass Hamburger Button */}
-            <div className="flex lg:hidden items-center gap-2 shrink-0 whitespace-nowrap text-nowrap">
+            {/* Mobile Actions: WhatsApp Quick Link + Prominent Luxury Hamburger */}
+            <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
+              {/* WhatsApp Quick Icon: on mobile (< sm) compact circular button */}
               <a
                 href={`https://wa.me/${retreatData.property.contact.whatsapp}?text=${encodeURIComponent(
                   "Hello Morni Singh's team! I would like to inquire about reserving the 2BHK Villa."
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-8 px-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-ui uppercase tracking-wider font-semibold flex items-center gap-1.5 shadow-md transition-colors whitespace-nowrap text-nowrap shrink-0"
+                className="h-9 w-9 sm:w-auto sm:px-3 rounded-full bg-emerald-600/95 hover:bg-emerald-500 active:scale-95 text-white text-xs font-ui uppercase tracking-wider font-semibold inline-flex items-center justify-center gap-1.5 shadow-md transition-all shrink-0 cursor-pointer"
                 title="WhatsApp Concierge"
+                aria-label="Direct Concierge WhatsApp"
               >
-                <MessageSquare className="w-3.5 h-3.5 fill-white text-white shrink-0" />
-                <span className="whitespace-nowrap text-nowrap">WhatsApp</span>
+                <MessageSquare className="w-4 h-4 fill-white text-white shrink-0" />
+                <span className="hidden sm:inline whitespace-nowrap text-nowrap">WhatsApp</span>
               </a>
 
+              {/* Mobile Hamburger Button - Guaranteed visible on every phone / iPhone, min 44px tap target */}
               <button
+                type="button"
                 onClick={() => setIsMobileOpen(true)}
-                className="p-2 text-white hover:text-gold-300 focus:outline-none cursor-pointer rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shrink-0"
+                className="h-9 min-w-[44px] px-2.5 sm:px-3 text-white hover:text-gold-300 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gold-400/50 cursor-pointer rounded-xl bg-white/15 hover:bg-white/25 active:bg-white/30 backdrop-blur-md border border-white/25 shrink-0 inline-flex items-center justify-center gap-1.5 shadow-md transition-all"
                 aria-label="Open Navigation Menu"
+                aria-expanded={isMobileOpen}
               >
-                <Menu className="w-5 h-5 shrink-0" />
+                <Menu className="w-5 h-5 text-white stroke-[2.2] shrink-0" />
+                <span className="text-[11px] font-mono uppercase tracking-wider font-semibold text-white/95 hidden xs:inline">
+                  MENU
+                </span>
               </button>
             </div>
           </div>

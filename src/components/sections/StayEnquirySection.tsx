@@ -201,11 +201,12 @@ Message: ${formattedMessage}`;
                 {/* Dates Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-ui uppercase tracking-wider text-forest-950 font-semibold mb-1.5 flex items-center gap-1.5">
+                    <label htmlFor="enquiry-checkin" className="block text-xs font-ui uppercase tracking-wider text-forest-950 font-semibold mb-1.5 flex items-center gap-1.5">
                       <Calendar className="w-3.5 h-3.5 text-gold-600" />
                       <span>Check-in Date</span>
                     </label>
                     <input
+                      id="enquiry-checkin"
                       type="date"
                       value={checkIn}
                       onChange={(e) => setCheckIn(e.target.value)}
@@ -215,11 +216,12 @@ Message: ${formattedMessage}`;
                   </div>
 
                   <div>
-                    <label className="block text-xs font-ui uppercase tracking-wider text-forest-950 font-semibold mb-1.5 flex items-center gap-1.5">
+                    <label htmlFor="enquiry-checkout" className="block text-xs font-ui uppercase tracking-wider text-forest-950 font-semibold mb-1.5 flex items-center gap-1.5">
                       <Calendar className="w-3.5 h-3.5 text-gold-600" />
                       <span>Check-out Date</span>
                     </label>
                     <input
+                      id="enquiry-checkout"
                       type="date"
                       value={checkOut}
                       onChange={(e) => setCheckOut(e.target.value)}
@@ -232,11 +234,12 @@ Message: ${formattedMessage}`;
                 {/* Guests & Contact Info */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
-                    <label className="block text-xs font-ui uppercase tracking-wider text-forest-950 font-semibold mb-1.5 flex items-center gap-1.5">
+                    <label htmlFor="enquiry-guests" className="block text-xs font-ui uppercase tracking-wider text-forest-950 font-semibold mb-1.5 flex items-center gap-1.5">
                       <Users className="w-3.5 h-3.5 text-gold-600" />
                       <span>Guests</span>
                     </label>
                     <select
+                      id="enquiry-guests"
                       value={guests}
                       onChange={(e) => setGuests(e.target.value)}
                       className="w-full bg-[#FAF8F5] border border-[#E7DFCD] px-3 py-2.5 text-xs font-ui text-forest-950 rounded-none focus:outline-none focus:border-gold-600 transition-colors"
@@ -249,11 +252,12 @@ Message: ${formattedMessage}`;
                   </div>
 
                   <div>
-                    <label className="block text-xs font-ui uppercase tracking-wider text-forest-950 font-semibold mb-1.5 flex items-center gap-1.5">
+                    <label htmlFor="enquiry-name" className="block text-xs font-ui uppercase tracking-wider text-forest-950 font-semibold mb-1.5 flex items-center gap-1.5">
                       <User className="w-3.5 h-3.5 text-gold-600" />
                       <span>Full Name *</span>
                     </label>
                     <input
+                      id="enquiry-name"
                       type="text"
                       required
                       value={name}
@@ -264,11 +268,12 @@ Message: ${formattedMessage}`;
                   </div>
 
                   <div>
-                    <label className="block text-xs font-ui uppercase tracking-wider text-forest-950 font-semibold mb-1.5 flex items-center gap-1.5">
+                    <label htmlFor="enquiry-phone" className="block text-xs font-ui uppercase tracking-wider text-forest-950 font-semibold mb-1.5 flex items-center gap-1.5">
                       <Phone className="w-3.5 h-3.5 text-gold-600" />
                       <span>Phone Number *</span>
                     </label>
                     <input
+                      id="enquiry-phone"
                       type="tel"
                       required
                       value={phone}
@@ -281,11 +286,12 @@ Message: ${formattedMessage}`;
 
                 {/* Message Field */}
                 <div>
-                  <label className="block text-xs font-ui uppercase tracking-wider text-forest-950 font-semibold mb-1.5 flex items-center gap-1.5">
+                  <label htmlFor="enquiry-message" className="block text-xs font-ui uppercase tracking-wider text-forest-950 font-semibold mb-1.5 flex items-center gap-1.5">
                     <MessageSquare className="w-3.5 h-3.5 text-gold-600" />
                     <span>Special Requests or Message</span>
                   </label>
                   <textarea
+                    id="enquiry-message"
                     rows={3}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}

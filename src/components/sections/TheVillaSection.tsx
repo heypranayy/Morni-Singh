@@ -145,6 +145,8 @@ export const TheVillaSection: React.FC = () => {
                 <img
                   src={selectedVillaPhoto.src}
                   alt={selectedVillaPhoto.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover filter brightness-[1.04] contrast-[1.03] saturate-[1.12] transition-all duration-700 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
@@ -189,6 +191,7 @@ export const TheVillaSection: React.FC = () => {
                   <button
                     key={pIdx}
                     onClick={() => setSelectedVillaPhoto(photo)}
+                    aria-label={`Select photo: ${photo.title}`}
                     className={`shrink-0 relative w-16 h-12 sm:w-20 sm:h-14 rounded overflow-hidden border-2 transition-all cursor-pointer ${
                       isSelected
                         ? "border-gold-600 scale-105 shadow-md"
@@ -199,6 +202,8 @@ export const TheVillaSection: React.FC = () => {
                     <img
                       src={photo.src}
                       alt={photo.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </button>

@@ -169,6 +169,9 @@ export const LuxuryCinematicHero: React.FC = () => {
             <img
               src={currentSlide.src}
               alt={currentSlide.title}
+              fetchPriority="high"
+              decoding="async"
+              loading="eager"
               className="w-full h-full object-cover object-center filter brightness-[1.03] contrast-[1.04] saturate-[1.12]"
             />
           </motion.div>
@@ -330,6 +333,7 @@ export const LuxuryCinematicHero: React.FC = () => {
               <button
                 key={slide.id}
                 onClick={() => handleSelect(idx)}
+                aria-label={`View slide ${idx + 1}: ${slide.title}`}
                 className={`relative shrink-0 flex items-center gap-2.5 p-1.5 sm:p-2 rounded-xl transition-all duration-300 border text-left cursor-pointer ${
                   isActive
                     ? "bg-white/30 backdrop-blur-md border-gold-400 shadow-[0_0_20px_rgba(229,184,105,0.5)] scale-105"
@@ -340,6 +344,8 @@ export const LuxuryCinematicHero: React.FC = () => {
                   <img
                     src={slide.src}
                     alt={slide.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover filter brightness-[1.05]"
                   />
                 </div>

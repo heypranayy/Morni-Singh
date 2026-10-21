@@ -50,7 +50,8 @@ export const MobileNav: React.FC<MobileNavProps> = ({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 xl:hidden"
+            className="fixed inset-0 bg-black/75 backdrop-blur-sm z-[99] lg:hidden"
+            aria-hidden="true"
           />
 
           {/* Luxury Slide-over Drawer */}
@@ -59,15 +60,19 @@ export const MobileNav: React.FC<MobileNavProps> = ({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 28, stiffness: 280 }}
-            className="fixed top-0 right-0 h-full w-full max-w-sm bg-[#102018] border-l border-gold-500/30 z-50 flex flex-col justify-between overflow-y-auto xl:hidden shadow-2xl p-6 text-white"
+            className="fixed top-0 right-0 h-full w-full max-w-sm bg-[#102018] border-l border-gold-500/30 z-[100] flex flex-col justify-between overflow-y-auto lg:hidden shadow-2xl p-6 text-white"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile Navigation Drawer"
           >
             {/* Top Bar with Brand & Close */}
             <div>
               <div className="flex items-center justify-between pb-5 border-b border-white/10">
                 <BrandLogo size="sm" showText={true} theme="dark" />
                 <button
+                  type="button"
                   onClick={onClose}
-                  className="p-2 text-parchment-200 hover:text-gold-400 focus:outline-none cursor-pointer rounded-full bg-white/5 border border-white/10"
+                  className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 text-parchment-200 hover:text-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-400/50 cursor-pointer rounded-full bg-white/5 border border-white/10 active:scale-95 transition-all"
                   aria-label="Close Navigation"
                 >
                   <X className="w-5 h-5" />
