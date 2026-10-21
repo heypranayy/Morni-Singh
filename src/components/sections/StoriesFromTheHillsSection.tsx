@@ -133,10 +133,10 @@ export const StoriesFromTheHillsSection: React.FC<StoriesFromTheHillsSectionProp
                 href={retreatData.property.location.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#FAF8F5] border border-[#E7DFCD] hover:border-gold-500/60 text-forest-950 hover:text-gold-700 transition-colors shrink-0 font-ui text-xs font-medium"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-forest-950 hover:bg-gold-500 text-white hover:text-forest-950 transition-colors shrink-0 font-ui text-xs font-semibold rounded-lg shadow-sm"
               >
-                <span>View Google Maps Listing</span>
-                <ExternalLink className="w-3 h-3 text-gold-600" />
+                <span>View Google Business (GMB) Listing</span>
+                <ExternalLink className="w-3 h-3 text-gold-400" />
               </a>
             </div>
           </div>

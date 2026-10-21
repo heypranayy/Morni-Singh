@@ -279,6 +279,19 @@ export const Footer: React.FC = () => {
                   <Mail className="w-3.5 h-3.5 text-gold-400 shrink-0" />
                   <span className="truncate">{retreatData.property.contact.email}</span>
                 </a>
+
+                {/* Direct GMB Listing Link */}
+                <a
+                  href={retreatData.property.location.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg bg-gold-400/10 hover:bg-gold-400/20 border border-gold-400/30 text-gold-300 hover:text-white text-xs font-mono uppercase tracking-wider transition-all shadow-xs"
+                  title="Open Google My Business (GMB) Profile"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+                  <span>Google Business Profile (GMB)</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+                </a>
               </div>
 
               {/* Driving travel times */}
@@ -302,7 +315,16 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-4 text-xs">
             <span>Check-in 2:00 PM · Check-out 11:00 AM</span>
             <span>·</span>
-            <span className="text-gold-300 font-medium">Bhoj Darara, Morni Hills, Haryana</span>
+            <a
+              href={retreatData.property.location.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold-300 hover:text-gold-200 underline underline-offset-4 font-medium inline-flex items-center gap-1"
+              title="View on Google Maps"
+            >
+              <span>Bhoj Darara, Morni Hills (GMB)</span>
+              <ArrowUpRight className="w-3 h-3" />
+            </a>
           </div>
         </div>
       </div>

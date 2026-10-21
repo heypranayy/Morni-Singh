@@ -15,7 +15,8 @@ import {
   ShieldCheck,
   ArrowRight,
   Info,
-  Car
+  Car,
+  ExternalLink
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -198,6 +199,20 @@ export const DestinationPage: React.FC = () => {
                 Drive times represent realistic estimates under normal daytime driving conditions.
                 Monsoon showers, mountain fog, holiday traffic, or hill road repairs can impact travel times.
               </span>
+            </div>
+
+            {/* Google Maps / GMB Profile Button */}
+            <div className="mt-4">
+              <a
+                href={retreatData.property.location.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-forest-950 hover:bg-forest-900 text-white hover:text-gold-300 transition-all text-xs font-mono uppercase tracking-wider shadow-sm"
+              >
+                <MapPin className="w-3.5 h-3.5 text-gold-400" />
+                <span>Open Sanctuary on Google Maps (GMB)</span>
+                <ExternalLink className="w-3 h-3 text-gold-400" />
+              </a>
             </div>
           </div>
 

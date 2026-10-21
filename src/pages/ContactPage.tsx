@@ -99,15 +99,13 @@ export const ContactPage: React.FC = () => {
               </div>
               <div className="pt-6 mt-6 border-t border-[#E7DFCD]">
                 <a
-                  href={`https://maps.google.com/?q=${encodeURIComponent(
-                    `${retreatData.property.name}, ${retreatData.property.location.fullAddress}`
-                  )}`}
+                  href={retreatData.property.location.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-forest-950 font-semibold hover:text-gold-700 transition-colors"
                 >
                   <Navigation className="w-3.5 h-3.5 text-gold-600" />
-                  <span>Open in Google Maps</span>
+                  <span>Open in Google Maps / GMB Profile</span>
                 </a>
               </div>
             </div>

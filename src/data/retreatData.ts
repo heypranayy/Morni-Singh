@@ -23,6 +23,7 @@ export interface PropertyLocation {
   landmark: string;
   fullAddress: string;
   googleMapsUrl: string;
+  gmbUrl?: string;
 }
 
 export interface CorporateEntity {
@@ -223,7 +224,8 @@ export const retreatData: RetreatData = {
       country: "India",
       landmark: "Near Government Polytechnic for Women (GPW)",
       fullAddress: "Panchkula - Badiyal Road, Bhoj Darara, Morni Hills, District Panchkula, Haryana 134205, India",
-      googleMapsUrl: "https://maps.google.com/?q=Morni+Singh's+Bhoj+Darara"
+      googleMapsUrl: "https://share.google/rHgaYpskHEe7KQ09W",
+      gmbUrl: "https://share.google/rHgaYpskHEe7KQ09W"
     },
     contact: {
       phone: "+91 96677 98451",
